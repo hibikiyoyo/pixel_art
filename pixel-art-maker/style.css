@@ -14,7 +14,7 @@ body{
     flex-direction: column;
 }
 
-.navbar, .container{
+.navbar, .container, .generate{
     background-color: rgb(28, 28, 29);
     width: 800px;
     border-radius: 3px;
@@ -23,9 +23,18 @@ body{
     padding: 1em;
     margin-bottom: 1em;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
+
+.generate{
+    padding: 1em;
+    margin-top: 1em;
+    justify-content: start;
+    align-items: center;
+    display: block;
+}
+
 .btn, input{
     height: 35px;
     padding: 0 1em;
@@ -37,15 +46,38 @@ body{
 }
 
 .container{
-    --size: 4;
+    --sizeWidth: 4;
+    --sizeHeight: 4;
     height: 800px;
     display: grid;
-    grid-template-columns: repeat(var(--size), 1fr);
-    grid-template-rows: repeat(var(--size), 1fr);
+    grid-template-columns: repeat(var(--sizeWidth), 1fr);
+    grid-template-rows: repeat(var(--sizeHeight), 1fr);
     gap: 3px;
     padding: 3px;
 }
 .pixel{
     background-color: rgb(61, 61, 61);
     border-radius: 2px;
+    border: 1px;
+}
+
+.sizeWidth, .sizeHeight {
+    color: white;
+}
+
+
+.sizeHeight {
+    margin-left: 10px;
+}
+
+#generateText {
+    background: #fff;
+    width: 100%;
+    height: 318px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 0;
+    float: left;
+    resize: none;
+    font: normal 1em/1 monospace;
 }
